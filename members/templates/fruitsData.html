@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+    {% block title %} FruitsData {% endblock title %} 
+
+ {% block content %}
+ <h2> FruitsData: </h2>
+
+ <ul>
+{% for x in mango %}
+
+<li> {{ x.name }} {{ x.count }} </li>
+{% endfor %}
+ </ul>
+
+ {% endblock content %}

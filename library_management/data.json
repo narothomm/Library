@@ -1,0 +1,56 @@
+[
+   {
+       "model": "library_management.author",
+       "pk": 1,
+       "fields": {
+           "name": "John Doe",
+           "email": "john.doe@example.com"
+       }
+   },
+   {
+       "model": "library_management.author",
+       "pk": 2,
+       "fields": {
+           "name": "Jane Smith",
+           "email": "jane.smith@example.com"
+       }
+   },
+   {
+       "model": "library_management.author",
+       "pk": 3,
+       "fields": {
+           "name": "Robert Brown",
+           "email": "robert.brown@example.com"
+       }
+   },
+   {
+       "model": "library_management.profile",
+       "pk": 1,
+       "fields": {
+           "bio": "John is a seasoned author with over a decade of experience in fiction writing.",
+           "website": "https://johndoeauthor.com",
+           "birthDate": "1985-06-15",
+           "author": 1
+       }
+   },
+   {
+       "model": "library_management.profile",
+       "pk": 2,
+       "fields": {
+           "bio": "Jane is a passionate poet and blogger.",
+           "website": null,
+           "birthDate": null,
+           "author": 2
+       }
+   },
+   {
+       "model": "library_management.profile",
+       "pk": 3,
+       "fields": {
+           "bio": "Robert specializes in historical non-fiction.",
+           "website": "https://robertbrownwrites.com",
+           "birthDate": "1978-09-22",
+           "author": 3
+       }
+   }
+]

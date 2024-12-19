@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+
+{% block title %}library status{% endblock title %}
+
+{% block content %}
+
+<div>
+  <h2> {{ library_status.average_price | floatformat:"2" }}</h2>
+  <h2> {{ library_status.total_books }}</h2>
+  <h2> {{ library_status.total_price }}</h2>
+</div>
+
+<div> 
+   <h2> Authors status:</h2>
+   <ul>
+      {% for author in authors1 %}
+      <li> name:{{ author.name}} </li>
+      <li> email:{{ author.email}} </li>
+      <li> total_books:{{ author.total_books}} </li>
+      <li> avg_book_price:{{ author.avg_book_price}} </li>
+      <hr>
+      {% endfor %}
+   </ul>
+
+         <div> 
+            <h2> Authors2 status:use nested li </h2>
+            <ul>
+               {% for author in authors2 %}
+               <li> name:{{ author.name}} </li>
+               <li> email:{{ author.email}} </li>
+
+                  <ul>
+                     {% for book in author.books.all %} 
+                     <li> title:{{ book.title }} </li>  
+                     <li> published_date:{{ book.published_date}} </li>  
+                     <li> price:{{ book.price }} </li>  
+                     <hr>
+                     {% endfor %}
+            </ul>
+
+               {% endfor %}
+         </div>  
+
+      <div> 
+         <h2> All books status:</h2>
+         <ul>
+            {% for book in books %} 
+            <li> title:{{ book.title }} </li>    
+            <li> price:{{ book.price }} </li>  
+            <hr>
+            {% endfor %}
+         </ul>
+      </div>
+
+    
+
+{% endblock content %}

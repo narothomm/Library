@@ -1,0 +1,26 @@
+{% comment %} # Step 9: Frontend Templates
+# --------------------------
+# a) base.html {% endcomment %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Affiliate Marketing</title>
+    <link rel="stylesheet" type="text/css" href="/static/affiliate_app/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Affiliate Marketing Website</h1>
+        <nav>
+            <a href="/">Home</a>
+            {% if user.is_authenticated %}
+                <a href="/logout/">Logout</a>
+            {% else %}
+                <a href="/login/">Login</a>
+            {% endif %}
+        </nav>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>

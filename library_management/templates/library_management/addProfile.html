@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% block title %}addProfile{% endblock title %}
+
+{% block content %}
+
+    <form action="" method="post">
+        {% csrf_token %}
+        {{form}}
+        <button type="submit">add Profile</button>
+
+    </form>
+{% endblock content %}

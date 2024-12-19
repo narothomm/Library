@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+    {% block title %}   
+        add member
+    {% endblock title %} 
+
+
+{% block content %}
+    <h2>Add member:</h2>
+    <form action="" method="POST"> 
+        {% csrf_token %}
+       <!-- <label for="">firstname:</label>
+        <input type="text" name="firstname">
+
+        <label for="">lastname:</label>
+        <input type="text" name="lastname">
+        <label for="">age:</label>
+        <input type="text" name="age"><br><br>  -->
+        {{ form }}
+        <button type="submit">add member</button>
+    </form>
+{% endblock content %}

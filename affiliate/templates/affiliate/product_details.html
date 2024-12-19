@@ -1,0 +1,18 @@
+{% extends 'affiliate/base.html' %}
+{% comment %} # c) product_detail.html {% endcomment %}
+
+
+{% block content %}
+<h2>{{ product.name }}</h2>
+<img src="{{ product.image.url }}" alt="{{ product.name }}" style="max-width:300px;">
+<p>{{ product.description }}</p>
+<p>Price: ${{ product.price }}</p>
+{% if user.is_authenticated %}
+    <form method="post" action="{% url 'place_order' product.pk %}">
+        {% csrf_token %}
+        <button type="submit">Order Now</button>
+    </form>
+{% else %}
+    <p><a href="/login/">Login</a> to place an order.</p>
+{% endif %}
+{% endblock %}

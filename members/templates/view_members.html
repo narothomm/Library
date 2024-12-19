@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>members name</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS (optional) -->
+    <title> view database </title>
+</head>
+<body>
+
+ <div>
+      {% for x in allMembers %}
+    <p> {{ forloop.counter}}. name:<a href="http://127.0.0.1:8000/members/memberDetails/{{ x.id}}"> {{ x.firstname }} {{ x.lastname }} age:{{ x.age }} </a> <a href="{% url 'deleteMember' x.id %}"> <button> delete </button> 
+    </a> <a href="{% url 'update_member' x.id %}"><button>update</button></a>
+   </p>
+      {% endfor %}
+    </div> 
+
+</body>
+</html>

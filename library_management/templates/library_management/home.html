@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block title %}library-home{% endblock title %}
+{% block content %}
+
+   <div>
+    <ul>
+        {% for author in authors %}
+         <li> {{author.name}} <a href="{% url 'addProfile' author.id %}"> <button>Add profile</button></a></li>
+        {% endfor %}
+       
+    </ul>
+       
+   </div>
+{% endblock content %}

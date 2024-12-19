@@ -1,0 +1,15 @@
+{% extends 'affiliate/base.html' %}
+{% comment %} # b) product_list.html {% endcomment %}
+
+
+{% block content %}
+<h2>Product List</h2>
+<ul>
+    {% for product in products %}
+    <li>
+        <a href="{% url 'product_detail' product.pk %}">{{ product.name }}</a> - ${{ product.price }}
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}
+

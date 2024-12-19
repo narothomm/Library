@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+    {% block title %} Home page {% endblock title %} 
+
+ {% block content %}
+ <h2> home page: </h2>
+
+
+
+ <header>
+  {% include "variable/menu.html" with me="Narothom" sponsor="w3"  %}
+
+    {% with pagetitle="Wellcome to member" %}
+   <h1> {{ pagetitle }} </h1>
+    {% endwith %}
+   </header>
+
+   <div>
+  {% for x in myVariables %}
+   {% comment %} {% if x.age > 30 %}
+  <p> {{ x.id }}:{{ x.firstname }} {{ x.lastname }} age:{{x.age}} </p>
+       {% endif %} {% endcomment %}
+       <p> {{ x.id }}:{{ x.firstname }} {{ x.lastname }} age:{{x.age}} </p>
+      {% endfor %}
+  </div> 
+
+  <div>
+   {% if greetings1 == 1 and  greetings2 == 5 %}
+   <h2> The value of greetings is {{ greetings1}} and {{greetings2}}  </h2>
+   {% else %}
+     <h2> value is not 5 </h2>
+   {% endif %}
+  </div>
+
+  {% include "variable/footer.html" %}
+
+ {% comment %} 
+     {{ myVariables }}
+ {% endcomment %}
+    
+{% endblock content %}

@@ -1,0 +1,29 @@
+/* # Step 10: Static Files
+# ----------------------
+# a) Create a styles.css file in affiliate_app/static/affiliate_app/styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #35424a;
+    color: #ffffff;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+button {
+   padding: 5px 10px;
+   background: #5cb85c;
+   color: white;
+   border: none;
+   cursor: pointer;
+}
+
+button:hover {
+   background: #4cae4c;
+}

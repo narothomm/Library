@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+    {% block title %}   
+    member details
+    {% endblock title %} 
+
+    {% block content %}
+<h2> Member details: </h2>
+   {{ member_details.firstname }}
+   {{ member_details.lastname }}
+   {{ member_details.age }}
+
+    {% endblock content %}
